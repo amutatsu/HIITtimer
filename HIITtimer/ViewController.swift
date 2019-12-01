@@ -67,6 +67,9 @@ class ViewController: UIViewController {
         
         countup(trainingTotalTime)
     
+        if count == 8 {
+            displayAlert()
+        }
     }
     
     @objc func updateIntervalTimer() {
@@ -92,6 +95,13 @@ class ViewController: UIViewController {
             count += 1
             countLabel.text = "\(count)"
         }
+    }
+    
+    func displayAlert() {
+        let alert = UIAlertController(title: "Finish!", message: nil, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
 }
