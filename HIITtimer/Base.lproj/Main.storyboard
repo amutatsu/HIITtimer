@@ -108,6 +108,7 @@
                         <outlet property="countLabel" destination="Py9-h9-knN" id="ZbA-sH-03V"/>
                         <outlet property="intervalTime" destination="tzf-Cs-tOS" id="0zc-Nm-WGO"/>
                         <outlet property="resetButton" destination="LTb-u9-Q8X" id="qiE-z1-0vP"/>
+                        <outlet property="startButton" destination="C6I-W9-XV7" id="a7Y-Wx-Oid"/>
                         <outlet property="trainingTime" destination="u9b-3r-hrC" id="cJn-TD-25Y"/>
                     </connections>
                 </viewController>
