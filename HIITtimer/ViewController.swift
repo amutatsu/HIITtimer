@@ -80,6 +80,25 @@ class ViewController: UIViewController {
     
         if count == 8 {
             displayAlert()
+            
+            tTimer.invalidate()
+            iTimer.invalidate()
+            
+            trainingTotalTime = defaultTrainingTime
+            intervalTotalTime = defaultIntervalTime
+            trainingTime.text = "\(trainingTotalTime) s"
+            intervalTime.text = "\(intervalTotalTime) s"
+            
+            count = 0
+            countLabel.text = String(count)
+            
+            startButton.setTitle("Start", for: .normal)
+            startButton.isEnabled = true
+            startButton.alpha = 1
+            
+            resetButton.isEnabled = true
+            resetButton.alpha = 1
+
         }
     }
     
