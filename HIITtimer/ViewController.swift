@@ -29,8 +29,6 @@ class ViewController: UIViewController {
         
         tTimer.invalidate()
         iTimer.invalidate()
-        trainingTotalTime = defaultTrainingTime
-        intervalTotalTime = defaultIntervalTime
         
         resetButton.isEnabled = true
         resetButton.alpha = 1
