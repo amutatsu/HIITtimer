@@ -53,7 +53,8 @@ class ViewController: UIViewController {
         trainingTime.text = "\(trainingTotalTime) s"
         intervalTime.text = "\(intervalTotalTime) s"
         
-        countLabel.text = "0"
+        count = 0
+        countLabel.text = String(count)
         
         startButton.setTitle("Start", for: .normal)
 
