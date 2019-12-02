@@ -5,6 +5,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var trainingTime: UILabel!
     @IBOutlet weak var intervalTime: UILabel!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
     let defaultTrainingTime = 20
@@ -20,6 +21,10 @@ class ViewController: UIViewController {
         
         tTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTrainingTimer), userInfo: nil, repeats: true)
         
+        startButton.isEnabled = false
+        startButton.alpha = 0
+        startButton.setTitle("Restart", for: .normal)
+        
         resetButton.isEnabled = false
         resetButton.alpha = 0
         
@@ -30,6 +35,9 @@ class ViewController: UIViewController {
         tTimer.invalidate()
         iTimer.invalidate()
         
+        startButton.isEnabled = true
+        startButton.alpha = 1
+        
         resetButton.isEnabled = true
         resetButton.alpha = 1
         
@@ -39,11 +47,16 @@ class ViewController: UIViewController {
         
         tTimer.invalidate()
         iTimer.invalidate()
+        
         trainingTotalTime = defaultTrainingTime
         intervalTotalTime = defaultIntervalTime
-        countLabel.text = "0"
         trainingTime.text = "\(trainingTotalTime) s"
         intervalTime.text = "\(intervalTotalTime) s"
+        
+        countLabel.text = "0"
+        
+        startButton.setTitle("Start", for: .normal)
+
         
     }
     
